@@ -1,88 +1,112 @@
-# 📊 Sales Forecasting using ARIMA
+🏠 House Price Prediction System (Machine Learning Project)
 
-## 📌 Project Overview
-This project aims to forecast future sales using time series analysis.  
-We use historical sales data and apply the ARIMA model to predict future values.
+📌 Overview
 
----
+This project is a Machine Learning-based system that predicts house prices using various features such as number of rooms, area, and other housing attributes. The model is built using Linear Regression and trained on a real-world dataset.
 
-## 🎯 Objective
-- Analyze sales trends
-- Make data stationary
-- Build a forecasting model
-- Predict future sales
+⸻
 
----
+🎯 Objective
 
-## 📂 Project Structure
-sales-forecasting-project/
+To build an end-to-end Machine Learning pipeline that:
+	•	Understands housing data
+	•	Performs data cleaning and analysis
+	•	Trains a regression model
+	•	Evaluates model performance
+	•	Predicts house prices for new data
+
+⸻
+
+🛠 Tech Stack
+	•	Python
+	•	Pandas
+	•	NumPy
+	•	Matplotlib
+	•	Seaborn
+	•	Scikit-learn
+	•	Jupyter Notebook
+  
+📂 Project Structure
+house-price-prediction/
 │
 ├── data/
-│   └── sales.csv
+│   └── housing.csv
 │
 ├── notebooks/
-│   └── sales_forecasting.ipynb
+│   └── analysis.ipynb
 │
-├── README.md
-└── requirements.txt
+├── src/
+│   └── predict.py
+│
+├── models/
+│   └── house_model.pkl
+│
+└── README.md
 
----
+⚙️ Workflow
 
-## ⚙️ Technologies Used
-- Python
-- Pandas
-- Matplotlib
-- Statsmodels
+1. Data Collection
+	•	Used Boston Housing dataset
+	•	Contains features like crime rate, number of rooms, tax, etc.
 
----
+2. Data Cleaning
+	•	Checked for missing values
+	•	Removed duplicates
+	•	Ensured dataset consistency
 
-## 🔍 Steps Performed
+3. Exploratory Data Analysis (EDA)
+	•	Used correlation heatmap to understand relationships
+	•	Identified important features affecting house prices
+	•	Found strong correlation between rm (rooms) and price
 
-### 1. Data Loading
-- Loaded dataset using Pandas
+4. Feature Selection
+	•	Features (X): All columns except medv
+	•	Target (y): medv (house price)
 
-### 2. Data Preprocessing
-- Converted date column to datetime
-- Set date as index
+5. Train-Test Split
+	•	Split dataset into:
+	•	80% training data
+	•	20% testing data
 
-### 3. Exploratory Data Analysis (EDA)
-- Visualized sales trend
-- Used moving averages
+6. Model Training
+	•	Used Linear Regression model from Scikit-learn
+	•	Model learns relationship between features and target
 
-### 4. Stationarity Check
-- Applied ADF Test
-- Found data non-stationary
+7. Model Evaluation
+	•	MAE (Mean Absolute Error): ~3.18
+	•	R² Score: ~0.66
 
-### 5. Differencing
-- Applied first-order differencing
-- Made data stationary
+8. Prediction
+	•	Predicted house prices using trained model
+	•	Created a separate script for predictions
 
-### 6. Model Building
-- Used ARIMA (1,1,1)
+9. Model Saving
+	•	Saved trained model using Pickle (.pkl file)
 
-### 7. Forecasting
-- Predicted future sales for next 5 days
+🧠 Key Learnings
+	•	Understanding of Machine Learning workflow
+	•	Difference between features and target variable
+	•	Importance of data cleaning and EDA
+	•	Model evaluation using MAE and R²
+	•	Saving and loading models using Pickle
+	•	Creating reusable prediction scripts
 
----
+⸻
 
-## 📊 Results
-- Sales show an increasing trend
-- Forecast predicts continued growth
+🚀 Future Improvements
+	•	Try advanced models (Random Forest, XGBoost)
+	•	Hyperparameter tuning
+	•	Deploy as a web application (Flask/Django)
+	•	Add user interface for input
 
----
+⸻
 
-## ⚠️ Limitations
-- Small dataset
-- Model accuracy may be limited
+👨‍💻 Author
 
----
+Uttam Saini
 
-## 🚀 Future Improvements
-- Use larger dataset
-- Add accuracy metrics (RMSE)
-- Tune ARIMA parameters
+⸻
 
----
+⭐ If you like this project
 
-## 👨‍💻 Author
-**Uttam Saini**
+Give it a ⭐ on GitHub!
